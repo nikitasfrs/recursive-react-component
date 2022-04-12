@@ -61,7 +61,7 @@ function TableRow({ node, onClickDelete }: TableRowProps) {
             <MuiTableRow key={title}>
               <TableCell
                 style={{ paddingBottom: 0, paddingTop: 0 }}
-                colSpan={6}
+                colSpan={Object.keys(data).length + 2}
               >
                 <Collapse in={open} timeout="auto" unmountOnExit>
                   <Box m={4}>
