@@ -11,7 +11,7 @@ export function isObjectEqual<T extends UnknownObject = TableRowRecord>(
   first: T,
   second: T
 ) {
-  return JSON.stringify(first) === JSON.stringify(second);
+  return first === second;
 }
 
 export function deleteNode(node: TreeNode, tree: TreeNode[]): TreeNode[] {
