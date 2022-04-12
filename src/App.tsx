@@ -1,4 +1,4 @@
-import { Box, Button } from "@mui/material";
+import { Box } from "@mui/material";
 import exampleData from "./example-data.json";
 import { TreeNode, deleteNode } from "./lib";
 import Table from "./Table";
@@ -9,15 +9,9 @@ function App() {
   const handleClickDelete = (node: TreeNode) => {
     setData(deleteNode(node, data));
   };
-  const handleClickReset = () => {
-    setData(exampleData);
-  };
   return (
     <Box m={4} className="App">
       <Table nodes={data} onClickDelete={handleClickDelete} />
-      <Button variant="contained" onClick={handleClickReset}>
-        Reset
-      </Button>
     </Box>
   );
 }
