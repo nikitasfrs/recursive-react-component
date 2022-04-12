@@ -23,7 +23,7 @@ export default function Table({
   title = "Data",
 }: TableProps) {
   if (!nodes.length) {
-    return <></>;
+    return <Typography variant="body1">No data found</Typography>;
   }
 
   return (
